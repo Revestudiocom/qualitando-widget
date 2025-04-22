@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Widget Qualitando</title>
+  <script src="https://cdn.qualitando.com/certificate/q65ae4dbf4c96a01e0cb844a6.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      if (window.QUAWidget && typeof window.QUAWidget.init === "function") {
+        window.QUAWidget.init({
+          xs: { size: 'small', styles: { 'right': '5px', 'top': '65px' } },
+          sm: { size: 'small', styles: { 'right': '15px', 'top': '135px' } },
+          md: { size: 'small', styles: { 'right': '15px', 'top': '95px' } },
+          lg: { size: 'large', styles: { 'right': '15px', 'top': '65px' } }
+        });
+      } else {
+        console.warn("QUAWidget non inizializzato.");
+      }
+    };
+  </script>
+</body>
+</html>
